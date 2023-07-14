@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <title>To Do App Using HTML and JS Only</title>
+</head>
+<body>
+    <div>
+        <h3>Add New Todo</h3>
+        <label for="todo">Todo Title</label><br>
+        <input type="text" id="todo" placeholder="Buy Milk">
+        <button onclick="addNewTodo()" id="button">Add ToDo</button>
+    </div>
+
+    <div>
+        <h3>List of Todo Items</h3>
+        <!-- <span id="todoList"></span> -->
+        <table id="todoList">
+
+        </table>
+    </div>
+    
+    <script>
+        let newTodo = document.getElementById("todo");
+        let todoList = document.getElementById("todoList");
+        let button = document.getElementById("button");
+        let todoArray = [];
+
+        function refreshTodoList(){
+            todoList.innerText = "";
+
+            for(let i=0; i<todoArray.length; i++){
+                if(todoArray[i] == undefined) continue;
+                
+                // todoList.innerHTML += todoArray[i] 
+                //     + `<button onclick="deleteById(${i})">D</button>`
+                //     + `<button onclick="editById(${i})">E</button><br>`;
+                todoList.innerHTML += `<tr>
+                    <td>${todoArray[i]}</td>
+                    <td><button onclick="deleteById(${i})">D</button></td>
+                    <td><button onclick="editById(${i})">E</button></td>
+                    </tr>`;
+            }
+        }
+
+        function addNewTodo(){
+            if(newTodo.value == ""){
+                alert("Empty Title");
+                return;
+            }
+
+            todoArray.push(newTodo.value);
+            refreshTodoList()
+        }
+
+        function editById(i){
+            
+            newTodo.value = todoArray[i];
+            
+            button.innerText = "Edit Todo";
+            button.setAttribute( "onClick", `updateTodo(${i})` );
+            // console.log(button.onclick);
+        }
+
+        function resetValues(){
+            newTodo.value = "";
+            button.innerText = "Add ToDo";
+            button.setAttribute( "onClick", `addNewTodo()` );
+        }
+
+        function updateTodo(i){
+            todoArray[i] = newTodo.value;
+            refreshTodoList();
+            resetValues();
+        }
+
+        function deleteById(i){
+            todoArray[i] = undefined;
+            refreshTodoList();
+        }
+
+    </script>
+
+</body>
+</html>
