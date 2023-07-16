@@ -1,6 +1,6 @@
 class Main {
     static boolean isPalindrome(String s, int l, int r){
-        if(l == r) return true;
+        if(l >= r) return true;
 
         boolean isSameChar;
         if(s.charAt(l) == s.charAt(r)) isSameChar = true;
@@ -11,7 +11,7 @@ class Main {
         return false;
     }
     public static void main(String[] args) {
-        String s = "racecar";
+        String s = "nabm";
         int l = 0, r = s.length() - 1;
         System.out.println(isPalindrome(s,l,r));
         
