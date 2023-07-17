@@ -1,2 +1,3 @@
 node-js/postgresql-api/node_modules/*
 .vscode/settings.json
+python/temp.py

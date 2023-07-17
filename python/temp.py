@@ -1,9 +1,4 @@
-def fun(number):
-    if(number<2):
-        return 1
-    elif(number/2==2):
-        return fun(number-1)
-    else:
-        return (number-1)*fun(number-1)
+t = 5
+word = f'{t} sa'
 
-print(fun(7))
+print(word)
