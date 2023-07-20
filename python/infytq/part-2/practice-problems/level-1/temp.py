@@ -1,28 +1,22 @@
-#lex_auth_0127136213490565121191
+'''Write a python function which accepts three numbers and returns True if
 
-def get_list(number):
-    list = []
+a. one of the three numbers is "close" to any one of the other numbers (differing from a number by at most 1), and
+b.Number that is left out is "far", differing from both other values by 2 or more.
+
+Sample Input
+i) 4,1,3
+ii) 5,6,7
+
+Expected Output
+i) True
+ii)False
+'''
+
+
+
+def close_number(num1,num2,num3):
+    two_num_close = check_two_num_close(num1,num2,num3)
     
-    for i in range(1, number-1):
-        if number % i == 0:
-            list.append(i)
-            
-    return list
-
-def find_gcd(num1,num2):
-    list1 = get_list(num1)
-    list2 = get_list(num2)
-
-    max = None
+    left_num_far = check_left_num_far(num1,num2,num3)
     
-    for i in list1:
-        print("Number to check", i)
-        if i in list2:
-            print("Number ",i," exists in l2")
-            max = i
-            print("max assigned")
-    
-
-num1=45
-num2=9
-print(find_gcd(num1,num2))
+print(close_number(5,4,2))
