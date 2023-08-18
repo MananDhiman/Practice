@@ -1,0 +1,2 @@
+def fun(var1):
+    
