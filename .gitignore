@@ -6,3 +6,6 @@ java/temp.java
 kotlin/.idea/*
 kotlin/out/*
 *temp*
+intellij-leetcode*
+/java/*
+intellij

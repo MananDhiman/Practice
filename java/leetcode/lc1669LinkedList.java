@@ -1,7 +1,6 @@
 import java.util.ArrayList;
-import java.util.List;
 
-public class lc1669 {
+public class lc1669LinkedList {
     public static class ListNode {
       int val;
       ListNode next;

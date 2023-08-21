@@ -1,3 +1,5 @@
-public class 19 {
-    
+class Main {
+    public static void main(String[] args) {
+        System.out.println("19");
+    }
 }
