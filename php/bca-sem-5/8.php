@@ -1,5 +1,6 @@
 <?php
-    $num = readline('Enter Number to find factorial of: ');
+  if(isset($_POST['submit'])) {
+    $num = $_POST['num'];
     $factorial = 1;
 
     while($num > 0){
@@ -7,6 +8,19 @@
         $num--;
     }
 
-    echo "Factorial is: ".$factorial;
+    echo "Factorial of '.$num.' is: ".$factorial;
+    
+  }
 
 ?>
+
+<html>
+<body>
+  <form action="#" method="POST">
+    Enter Number to find factorial of: <br>
+    <input type="text" name="num"><br>
+    <input type="submit" name="submit" value="Submit">
+  </form>
+
+</body>
+</html>
