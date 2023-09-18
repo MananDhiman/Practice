@@ -40,6 +40,13 @@ app.post('/api/customers', async(req, res) => {
 
 });
 
+app.get('/api/customers/:id/:name', async(req,res) => {
+  res.json({
+    requestParams: req.params,
+    requestQuery: req.query
+  })
+});
+
 const start = async() => {
   try {
     await mongoose.connect(CONNECTION);

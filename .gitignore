@@ -10,3 +10,5 @@ intellij-leetcode*
 /java/*
 intellij
 *node_modules*
+node-js/mysql/package-lock.json
+.directory
