@@ -12,3 +12,5 @@ intellij
 *node_modules*
 *.exe
 *.o
+node-js/mysql/package-lock.json
+.directory
