@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+<html>
 <body>
   <form action='#' method="POST">
-    <input type="text" name="number1" placeholder="Enter First Number">
-    <input type="text" name="number2" placeholder="Enter Second Number">
+	Enter First Number
+    <input type="text" name="number1" placeholder="Enter First Number"><br>
+	Enter First Number
+    <input type="text" name="number2" placeholder="Enter Second Number"><br>
     <input type="submit" name="submit" value="Submit">
   </form>
+  sasa
 </body>
 </html>
 

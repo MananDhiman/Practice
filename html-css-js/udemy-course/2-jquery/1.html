@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1 id="h1">This is header 1</h1>
+  <div id="ajaxMessage"></div>
+  <button id="button">Get Data</button>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+
+    
+
+    function getData() {
+      $.ajax({
+        url: 'sample.html',
+        type: 'GET',
+        dataType: 'text',
+        success: successFun, // if page found
+        error: errorFun, // if page not found
+        complete: function(xhr, status) { // runs when req complete
+          console.log("request complete");
+        }
+      });
+    }
+
+    function successFun(result) {
+      console.log("success");
+      $("#ajaxMessage").html(result);
+    }
+
+    function errorFun() {
+      console.log("failure");
+    }
+
+  </script>
+</body>
+</html>
